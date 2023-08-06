@@ -1,9 +1,9 @@
 FROM node:20-alpine3.17
 
-WORKDIR /usr/src/app/data
+WORKDIR /usr/src/app
 
-# RUN mkdir -p data && \
-RUN npm install -g soul-cli && \
+RUN mkdir -p data && \
+    npm install -g soul-cli && \
     wget https://raw.githubusercontent.com/lerocha/chinook-database/master/ChinookDatabase/DataSources/Chinook_Sqlite.sqlite \
       -O test.sqlite
 
