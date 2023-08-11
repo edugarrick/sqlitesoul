@@ -8,6 +8,5 @@ RUN mkdir -p data && \
       -O test.sqlite
 
 WORKDIR /usr/src/app
-COPY entrypoint.sh .
 EXPOSE 80
-ENTRYPOINT ["./entrypoint.sh"]
+CMD soul -d $SQLITE_DATABASE -p 80
